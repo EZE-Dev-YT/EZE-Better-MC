@@ -1,0 +1,8 @@
+{
+  "ui_defs": [
+    "uidx/common_sections/ui_template_scroll.uidx",
+    "uidx/common_sections/ui_template_toggles.uidx",
+    "uidx/main_screens/chat_screen.uidx",
+    "uidx/main_screens/host_options_screen.uidx"
+  ]
+}
