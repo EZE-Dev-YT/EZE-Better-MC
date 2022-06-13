@@ -1,0 +1,162 @@
+
+/*//// File modified by @CrisXolt ////*/
+{
+  /*//// Ignores the original Chat Panel ////*/
+
+  "chat_panel": {
+    "ignored": true,
+    "controls": [
+      { "empty@common.empty_panel": { } }
+    ]
+  },
+
+  /*//// Modified Chat Panel ////*/
+
+  "chat_grid_item_dx": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "chat_messages_background": {
+          "type": "image",
+          "texture": "textures/uidx/chat_messages_bg",
+          "size": [ "100%", "100%c" ],
+          "anims": [
+            "@hud.anim_chat_bg_wait_dx"
+          ],
+          "controls": [
+            {
+              "chat_text@hud.chat_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "line_padding": -1,
+                "offset": [ 2, 0.5 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "anim_chat_bg_alpha_dx": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "destroy_at_end": "chat_grid_item",
+    "duration": 1,
+    "from": 1.0,
+    "to": 0
+  },
+
+  "anim_chat_bg_wait_dx": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "hud.anim_chat_bg_alpha_dx"
+  },
+
+  "chat_panel_dx": {
+    "type": "panel",
+    "layer": 75,
+    "clips_children": true,
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "40%", 180 ],
+    "offset": [ 0, -40 ],
+    "propagate_alpha": true,
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "factory": {
+            "name": "chat_item_factory",
+            "max_children_size": 50,
+            "control_ids": {
+              "chat_item": "chat_item@hud.chat_grid_item_dx"
+            }
+          }
+        }
+      }
+    ]
+  },
+
+  
+  "position_stack_dx": {
+    "type": "stack_panel",
+    "size": [ 50, "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "pocket_padding_panel": {
+          "type": "panel",
+          "size": [ "100%", 30 ],
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "paper_doll_padding": {
+          "type": "panel",
+          "size": [ "100%", 50 ],
+          "bindings": [
+            {
+              "binding_name": "#paper_doll_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "chat_stack_panel": {
+    "type": "stack_panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "fill_padding": {
+          "type": "panel",
+          "size": [ 1, "fill" ]
+        }
+      },
+      { "chat_panel@hud.chat_panel_dx": {} },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ 1, 42 ]
+        }
+      }
+    ]
+  },
+
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "chat_stack_panel@hud.chat_stack_panel": { "$original_mode": true } }
+        ]
+      }
+    ]
+  }
+}

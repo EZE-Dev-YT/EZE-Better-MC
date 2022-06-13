@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.cape.custom": {
+      "rebuild_animation_matrices": true,
+      "arrays": {
+        "textures": {
+          "array.capes": [
+            "texture.cape1"
+          ]
+        }
+      },
+      "geometry": "Geometry.cape",
+      "materials": [ { "*": "Material.cape" } ],
+      "textures": [ "array.capes[(query.anim_time * 20.0) + math.sin(query.anim_time * 75.0)]" ],
+      "part_visibility": [
+        { "cape": "(query.armor_texture_slot(1) != 5) && (!variable.is_first_person || variable.is_paperdoll) && (!variable.map_face_icon)" }
+      ]
+    }
+  }
+}

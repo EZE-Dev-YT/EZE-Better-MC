@@ -1,0 +1,44 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.wings": {
+      "geometry": "Geometry.wings",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.wings" ],
+      "is_hurt_color":{},
+      "on_fire_color":{}
+    },
+    "controller.render.wings_layer": {
+      "geometry": "Geometry.wings",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.wings_layer" ],
+      "is_hurt_color":{
+        "r":"math.cos(query.life_time * 200.0 - 300.0) * 0.25 + 0.25",
+        "g": 0.0,
+        "b":"math.sin(query.life_time * 200.0) * 0.25 + 0.4",
+        "a": 0.5
+      },
+      "on_fire_color":{
+        "r":"math.cos(query.life_time * 200.0 - 300.0) * 0.25 + 0.25",
+        "g": 0.0,
+        "b":"math.sin(query.life_time * 200.0) * 0.25 + 0.4",
+        "a": 0.5     	
+      },
+      "overlay_color":{
+        "r":"math.cos(query.life_time * 200.0 - 300.0) * 0.25 + 0.25",
+        "g": 0.0,
+        "b":"math.sin(query.life_time * 200.0) * 0.25 + 0.4",
+        "a": 0.5
+      }
+    },
+    "controller.render.halo": {
+      "geometry": "Geometry.halo",
+      "materials": [ { "*": "Material.halo" } ],
+      "textures": [ "Texture.halo" ],
+      "is_hurt_color":{},
+      "on_fire_color":{},
+      "ignore_lighting":true
+    }
+  }
+}
+//made by ambient#2309 - do not redistribute publicly without permission!

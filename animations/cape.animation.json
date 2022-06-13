@@ -1,0 +1,62 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.player.cape": {
+      "loop": true,
+      "bones": {
+        "cape": {
+          "rotation": [ "math.clamp(math.lerp(0, -110, query.cape_flap_amount) - (16 * query.modified_move_speed), -45, 0)", "query.modified_move_speed * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 35", 0 ],
+          "position": [ 0, 0, "query.get_root_locator_offset('armor_offset.default_neck', 1)" ]
+        },
+        "part1": {
+          "rotation": [ "query.modified_move_speed + query.cape_flap_amount * (math.cos(query.modified_distance_moved * 18) * 16)", 0, "query.modified_move_speed * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 5" ]
+        },
+        "part2": {
+          "rotation": [ "query.cape_flap_amount * math.cos(22 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part3": {
+          "rotation": [ "query.cape_flap_amount * math.cos(50 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part4": {
+          "rotation": [ "query.cape_flap_amount * math.cos(76 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part5": {
+          "rotation": [ "query.cape_flap_amount * math.cos(100 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part6": {
+          "rotation": [ "query.cape_flap_amount * math.cos(122 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part7": {
+          "rotation": [ "query.cape_flap_amount * math.cos(142 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part8": {
+          "rotation": [ "query.cape_flap_amount * math.cos(160 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part9": {
+          "rotation": [ "query.cape_flap_amount * math.cos(176 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part10": {
+          "rotation": [ "query.cape_flap_amount * math.cos(190 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part11": {
+          "rotation": [ "query.cape_flap_amount * math.cos(202 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part12": {
+          "rotation": [ "query.cape_flap_amount * math.cos(212 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part13": {
+          "rotation": [ "query.cape_flap_amount * math.cos(220 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part14": {
+          "rotation": [ "query.cape_flap_amount * math.cos(226 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part15": {
+          "rotation": [ "query.cape_flap_amount * math.cos(230 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        },
+        "part16": {
+          "rotation": [ "query.cape_flap_amount * math.cos(232 - query.modified_distance_moved * 18) * 13", 0, "query.cape_flap_amount * math.sin(query.body_y_rotation - query.head_y_rotation(0)) * 6" ]
+        }
+      }
+    }
+  }
+}

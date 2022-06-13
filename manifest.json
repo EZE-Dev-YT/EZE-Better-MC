@@ -1,0 +1,60 @@
+{
+    "format_version": 2,
+  "header": {
+    "description": "Made By: EZE \n EZE Client Better MC is a forked pack from packet client (PacketClientRP) and i used it to add more things like rick roll cape, wavy capes and invs armor",
+    "name": "EZE Client Better MC",
+    "uuid": "3e80cbd5-7ab9-4e4d-a768-f35d4d62c452",
+    "version": [ 3, 8, 0 ],
+    "min_engine_version": [ 1, 16, 0 ]
+  },
+    "modules": [
+        {
+            "description": "EZE Client Better MC forked pack from packet client to add more things like rick roll cape, wavy capes and more",
+            "type": "resources",
+            "uuid": "c332958a-8ea3-4f8c-a74f-c57c26e93878",
+            "version": [1, 0, 0]
+        }
+    ],
+   "subpacks":[
+      {
+         "folder_name":"cape_minecon2011",
+         "name":"§f§lCape: Minecon 2011§r",
+         "memory_tier":7
+      },
+      {
+         "folder_name":"cape_minecon2012",
+         "name":"§f§lCape: Minecon 2012§r",
+         "memory_tier":6
+      },
+      {
+         "folder_name":"cape_minecon2013",
+         "name":"§f§lCape: Minecon 2013§r",
+         "memory_tier":5
+      },
+      {
+         "folder_name":"cape_minecon2015",
+         "name":"§f§lCape: Minecon 2015§r",
+         "memory_tier":4
+      },
+      {
+         "folder_name":"cape_minecon2016",
+         "name":"§f§lCape: Minecon 2016§r",
+         "memory_tier":3
+      },
+      {
+         "folder_name":"cape_developer",
+         "name":"§f§lCape: Rickrol§l",
+         "memory_tier":2
+      },
+      {
+         "folder_name":"cape_gradient",
+         "name":"§f§lCape: Gradient§r",
+         "memory_tier":1
+      },
+      {
+         "folder_name":"cape_packetclient",
+         "name":"§f§lCape: Packet Client§r",
+         "memory_tier":0
+      }
+   ]
+}
